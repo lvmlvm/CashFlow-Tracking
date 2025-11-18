@@ -1,9 +1,9 @@
 import React from "react";
 
 const accounts = [
-  { label: "Bank Account", value: "€23.826" },
-  { label: "Vaults", value: "€34.109" },
-  { label: "Cash", value: "€10.320" },
+  { label: "Main Wallet", icon: "🧱", value: "€23.826" },
+  { label: "PayPal Wallet", icon: "💳", value: "€34.109" },
+  { label: "Cash", icon: "💷", value: "€10.320" },
 ];
 
 const upcoming = [
@@ -39,12 +39,17 @@ export default function DashboardPage() {
 function MyAccounts() {
   return (
     <section className="bg-white rounded-2xl shadow-sm border border-[#eceee4] px-8 py-7 flex flex-col justify-between">
-      <h2 className="text-xl font-bold mb-4">My accounts</h2>
+      <h2 className="text-xl font-bold mb-4">My wallets</h2>
 
       <div className="space-y-3">
         {accounts.map((a) => (
           <div key={a.label} className="flex items-center justify-between text-sm">
-            <span>{a.label}</span>
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full flex items-center justify-center bg-[#e7efcf] text-base">
+                {a.icon}
+              </span>
+              <span>{a.label}</span>
+            </div>
             <span className="font-semibold tracking-tight">{a.value}</span>
           </div>
         ))}

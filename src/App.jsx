@@ -12,10 +12,10 @@ export default function App() {
   const [activePage, setActivePage] = useState("dashboard");
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f6f7f2] text-[#1b1d12]">
+    <div className="h-screen flex flex-col bg-[#f6f7f2] text-[#1b1d12]">
       <Header />
 
-      <div className="flex flex-1">
+      <div className="flex flex-1 overflow-hidden">
         <Sidebar activePage={activePage} onChangePage={setActivePage} />
 
         <main className="flex-1 px-10 py-8 overflow-auto">
