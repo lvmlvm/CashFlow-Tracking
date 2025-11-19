@@ -18,7 +18,6 @@ export default function Sidebar({ activePage, onChangePage }) {
           onClick={() => onChangePage("transactions")}
           variant="block"
         />
-        <SidebarItem label="Invoices" icon="🧾" />
         <SidebarItem
           label="Reports"
           icon="📊"

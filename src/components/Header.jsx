@@ -12,7 +12,6 @@ export default function Header() {
 
       <div className="flex items-center gap-5 text-[#1b1d12]">
         <HeaderIcon label="Account" />
-        <HeaderIcon label="Help" />
         <HeaderIcon label="Settings" />
         <HeaderIcon label="Logout" />
       </div>
